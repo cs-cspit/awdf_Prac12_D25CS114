@@ -9,7 +9,7 @@ describe('Task Management API Automated CI Tests', () => {
     // Test 1: Step 2 from Practical 12 Syllabus
     test('GET /tasks returns status 200 and array of tasks', async () => {
         const res = await request(app).get('/tasks');
-        expect(res.statusCode).toBe(500);
+        expect(res.statusCode).toBe(200);
         expect(Array.isArray(res.body)).toBe(true);
         expect(res.body.length).toBeGreaterThanOrEqual(1);
     });
